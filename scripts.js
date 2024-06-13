@@ -1,4 +1,4 @@
-// Simple client-side authentication (not secure, for demonstration only)
+// 간단한 클라이언트 측 인증 (보안성 없음, 데모용)
 
 document.addEventListener('DOMContentLoaded', function() {
     const signupForm = document.getElementById('signupForm');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('newPassword').value;
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
-            alert('Sign up successful!');
+            alert('회원가입 성공!');
             window.location.href = 'login.html';
         });
     }
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const storedPassword = localStorage.getItem('password');
 
             if (username === storedUsername && password === storedPassword) {
-                alert('Login successful!');
+                alert('로그인 성공!');
                 window.location.href = 'index.html';
             } else {
-                alert('Invalid username or password');
+                alert('사용자 이름 또는 비밀번호가 잘못되었습니다');
             }
         });
     }
